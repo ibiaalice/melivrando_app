@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:melivrando/app/home/home.dart';
+import 'package:melivrando/app/profile/profile.dart';
 
 class DrawerHome extends StatelessWidget {
   @override
@@ -15,9 +16,8 @@ class DrawerHome extends StatelessWidget {
                 title: 'Perfil',
                 icon: Icons.account_circle,
                 onTap: () {
-                  // fazer página perfil
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                      MaterialPageRoute(builder: (context) => Profile()));
                 },
               ),
               OptionDrawer(
