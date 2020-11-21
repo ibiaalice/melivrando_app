@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:melivrando/app/widgets/drawer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -26,6 +27,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
+      drawer: DrawerHome(),
     );
   }
 }
