@@ -13,6 +13,12 @@ class ProfileInfo extends StatelessWidget {
         width: double.infinity,
         child: Card(
           color: Color(0xFF79ACE2),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18),
+            side: BorderSide(
+              color: Colors.black26,
+            ),
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
