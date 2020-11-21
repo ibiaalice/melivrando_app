@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:melivrando/app/home/home.dart';
 
 class DrawerHome extends StatelessWidget {
   @override
@@ -9,25 +10,76 @@ class DrawerHome extends StatelessWidget {
         children: [
           Column(
             children: [
-              ListTile(
-                title: Text('Perfil'),
-                onTap: () => print('perfil'),
+              SizedBox(height: 20),
+              OptionDrawer(
+                title: 'Perfil',
+                icon: Icons.account_circle,
+                onTap: () {
+                  // fazer página perfil
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
               ),
-              ListTile(
-                title: Text('Configurações'),
-                onTap: () => print('Configurações'),
+              OptionDrawer(
+                title: 'Configurações',
+                icon: Icons.settings,
+                onTap: () {
+                  // fazer página perfil
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
               ),
-              ListTile(
-                title: Text('Sobre'),
-                onTap: () => print('Sobre'),
+              OptionDrawer(
+                title: 'Sobre',
+                icon: Icons.info,
+                onTap: () {
+                  // fazer página perfil
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
               ),
             ],
           ),
-          ListTile(
-            title: Text('Sair'),
-            onTap: () => print('Sair'),
+          OptionDrawer(
+            title: 'Sair',
+            icon: Icons.cancel_sharp,
+            onTap: () {
+              // fazer página perfil
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => HomePage()));
+            },
           ),
         ],
+      ),
+    );
+  }
+}
+
+class OptionDrawer extends StatelessWidget {
+  final String title;
+  final IconData icon;
+  final Function onTap;
+
+  const OptionDrawer({Key key, this.title, this.icon, this.onTap})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        title: Text(
+          title,
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Color(0xFFE03148),
+          ),
+        ),
+        leading: Icon(
+          icon,
+          color: Color(0xFFE03148),
+        ),
+        onTap: onTap,
       ),
     );
   }
