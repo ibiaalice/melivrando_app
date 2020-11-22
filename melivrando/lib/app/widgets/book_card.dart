@@ -9,7 +9,7 @@ class BookCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: isRead(book.status) ? Colors.greenAccent : Color(0xFF79ACE2),
+      color: isRead(book.status) ? Colors.greenAccent : Color(0xFFEB8D9A),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18),
         side: BorderSide(
