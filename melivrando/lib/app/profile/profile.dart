@@ -21,6 +21,12 @@ class Profile extends StatelessWidget {
                 BookCard(
                   book: books[0],
                 ),
+                BookCard(
+                  book: books[1],
+                ),
+                BookCard(
+                  book: books[2],
+                ),
               ],
             ),
           )

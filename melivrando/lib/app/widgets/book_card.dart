@@ -20,16 +20,10 @@ class BookCard extends StatelessWidget {
         width: 100,
         height: 120,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ImageBook(url: book.urlImage),
-            Text(
-              book.title,
-              style: TextStyle(
-                color: Colors.redAccent,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            TitleBook(title: book.title),
           ],
         ),
       ),
@@ -50,15 +44,42 @@ class ImageBook extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(10),
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: NetworkImage(url),
-          )),
+        color: Colors.blue,
+        borderRadius: BorderRadius.circular(10),
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: NetworkImage(url),
+        ),
+      ),
       height: 80,
       width: 70,
-      // child: Image.network(url, ),
+    );
+  }
+}
+
+class TitleBook extends StatelessWidget {
+  final String title;
+
+  const TitleBook({Key key, this.title}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10),
+      child: Container(
+        height: 20,
+        width: double.infinity,
+        child: Text(
+          title,
+          overflow: TextOverflow.visible,
+          maxLines: 10,
+          style: TextStyle(
+            fontSize: 10,
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
     );
   }
 }
