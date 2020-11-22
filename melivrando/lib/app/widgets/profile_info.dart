@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:melivrando/app/user/user.dart';
+import 'package:melivrando/domain/entities/user/user.dart';
 
 class ProfileInfo extends StatelessWidget {
   final User user;

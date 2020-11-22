@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:melivrando/app/user/user.dart';
 import 'package:melivrando/app/widgets/book_card.dart';
 import 'package:melivrando/app/widgets/profile_info.dart';
+import 'package:melivrando/domain/entities/book/book.dart';
+import 'package:melivrando/domain/entities/user/user.dart';
 
 class Profile extends StatelessWidget {
-  User user = User();
+  final User user = User();
+
   @override
   Widget build(BuildContext context) {
+    final List<Book> books = user.getBooks();
+
     return Scaffold(
       body: ListView(
         children: [
@@ -14,7 +18,9 @@ class Profile extends StatelessWidget {
           Container(
             child: Row(
               children: [
-                BookCard(),
+                BookCard(
+                  book: books[0],
+                ),
               ],
             ),
           )
