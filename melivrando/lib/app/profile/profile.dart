@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:melivrando/app/user/user.dart';
+import 'package:melivrando/app/widgets/book_card.dart';
 import 'package:melivrando/app/widgets/profile_info.dart';
 
 class Profile extends StatelessWidget {
@@ -10,6 +11,13 @@ class Profile extends StatelessWidget {
       body: ListView(
         children: [
           ProfileInfo(user: user),
+          Container(
+            child: Row(
+              children: [
+                BookCard(),
+              ],
+            ),
+          )
         ],
       ),
     );
