@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:melivrando/app/about/about.dart';
+import 'package:melivrando/app/configuration/configuration.dart';
 import 'package:melivrando/app/home/home.dart';
 import 'package:melivrando/app/profile/profile.dart';
 
@@ -24,9 +26,8 @@ class DrawerHome extends StatelessWidget {
                 title: 'Configurações',
                 icon: Icons.settings,
                 onTap: () {
-                  // fazer página perfil
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                      MaterialPageRoute(builder: (context) => Configuration()));
                 },
               ),
               OptionDrawer(
@@ -35,7 +36,7 @@ class DrawerHome extends StatelessWidget {
                 onTap: () {
                   // fazer página perfil
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                      MaterialPageRoute(builder: (context) => About()));
                 },
               ),
             ],

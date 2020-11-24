@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:melivrando/app/widgets/book_card.dart';
 import 'package:melivrando/app/widgets/book_grid.dart';
 import 'package:melivrando/app/widgets/profile_info.dart';
 import 'package:melivrando/domain/entities/book/book.dart';
