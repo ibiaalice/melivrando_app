@@ -12,6 +12,10 @@ class Profile extends StatelessWidget {
     List<Book> books = user.getBooks();
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blueAccent,
+        title: Text('Perfil'),
+      ),
       body: Column(
         children: [
           SizedBox(height: 20),
